@@ -1,4 +1,4 @@
-def hello(name="GitHub Actions"):
-    if not isinstance(name, str):
-        raise TypeError("Le nom doit être une chaîne")
-    return f"Hello, {name}!"
+def hello(firstname="John", lastname="Doe"):
+    if not (isinstance(firstname, str) and isinstance(lastname, str)):
+        raise TypeError("Les paramètres doivent être des chaînes")
+    return f"Hello, {firstname} {lastname}!"
